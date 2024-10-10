@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Variáveis de cor */
+:root {
+    --primary-color: #2f9234; /* Verde suave */
+    --primary-hover-color: #004d04; /* Verde suave mais escuro */
+    --text-color: #f4f4f4; /* Cinza claro */
+    --background-color: #2c2c2c; /* Cinza escuro */
+    --white-color: #ffffff;
+    --light-grey-color: #3a3a3a; /* Cinza médio */
+    --border-color: #7f8c8d; /* Cinza esverdeado */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: var(--primary-color);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 0 auto;
+    
+}
+
+nav button {
+    color: var(--white-color);
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    margin: 5px;
+}
+
+nav button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+
+#emprestimos h2, #historico h2 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+form {
+    background: var(--light-grey-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+form input[type="text"], form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+form button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+#searchInput {
+    margin-bottom: 20px;
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--light-grey-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 12px 15px;
+    text-align: left;
+    color: var(--text-color);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--background-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    nav button {
+        padding: 10px 15px;
+    }
+
+    form {
+        padding: 10px;
+    }
+
+    form input[type="text"], form input[type="date"] {
+        padding: 8px;
+    }
+
+    form button {
+        padding: 8px 15px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
